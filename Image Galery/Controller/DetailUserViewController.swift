@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class DetailUserViewController: UIViewController {
 
     //@IBOutlet weak var userDetailLabel: UILabel!
     var name : String?
+    var imageDetailV : String?
+    
+    @IBOutlet weak var imageDetail: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        // userDetailLabel.text = name
+        let urlImage = URL(string: imageDetailV!)
+        imageDetail.af_setImage(withURL: urlImage!)
 
         // Do any additional setup after loading the view.
     }

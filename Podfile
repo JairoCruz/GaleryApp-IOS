@@ -9,5 +9,6 @@ target 'Image Galery' do
 pod 'SwiftyJSON'
 pod 'Alamofire'
 pod 'AlamofireImage'
+pod 'AlamofireNetworkActivityIndicator'
 
 end

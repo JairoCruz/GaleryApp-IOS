@@ -36,43 +36,43 @@
                                                         <constraint firstAttribute="height" constant="200" id="Ur3-Qd-aDi"/>
                                                     </constraints>
                                                 </imageView>
-                                                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwB-Dc-jWa">
-                                                    <rect key="frame" x="0.0" y="155" width="320" height="45"/>
+                                                <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbx-dd-0X0">
+                                                    <rect key="frame" x="0.0" y="133" width="320" height="67"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="45" id="KcM-0b-qKM"/>
+                                                        <constraint firstAttribute="height" constant="67" id="3KB-ym-0w6"/>
                                                     </constraints>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageDummy" translatesAutoresizingMaskIntoConstraints="NO" id="iBm-qb-h6i">
                                                     <rect key="frame" x="16" y="142" width="50" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="DmP-Tt-rWd"/>
-                                                        <constraint firstAttribute="height" constant="50" id="o2y-5f-bze"/>
+                                                        <constraint firstAttribute="height" constant="50" id="8Jh-jB-exx"/>
+                                                        <constraint firstAttribute="width" constant="50" id="JH4-Su-aS9"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fao-uN-vMJ">
-                                                    <rect key="frame" x="74" y="163" width="238" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fao-uN-vMJ">
+                                                    <rect key="frame" x="73" y="151" width="38.5" height="32"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="jeD-08-YfP"/>
+                                                        <constraint firstAttribute="height" constant="32" id="drV-KB-rJe"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="9Na-pH-5bM" secondAttribute="trailing" id="3Gc-GZ-Hrb"/>
-                                                <constraint firstItem="iBm-qb-h6i" firstAttribute="leading" secondItem="7JR-z2-Qha" secondAttribute="leading" constant="16" id="3I5-6y-Vpr"/>
-                                                <constraint firstAttribute="trailing" secondItem="fao-uN-vMJ" secondAttribute="trailing" constant="8" id="7kB-92-Oh5"/>
+                                                <constraint firstAttribute="bottom" secondItem="fao-uN-vMJ" secondAttribute="bottom" constant="17" id="78r-vG-kIf"/>
                                                 <constraint firstItem="9Na-pH-5bM" firstAttribute="leading" secondItem="7JR-z2-Qha" secondAttribute="leading" id="Ak6-mK-9i0"/>
-                                                <constraint firstAttribute="bottom" secondItem="vwB-Dc-jWa" secondAttribute="bottom" id="E8R-3k-6f2"/>
-                                                <constraint firstAttribute="bottom" secondItem="fao-uN-vMJ" secondAttribute="bottom" constant="16" id="HZV-Qx-5p0"/>
-                                                <constraint firstAttribute="trailing" secondItem="vwB-Dc-jWa" secondAttribute="trailing" id="IHR-6i-A7e"/>
-                                                <constraint firstItem="vwB-Dc-jWa" firstAttribute="leading" secondItem="7JR-z2-Qha" secondAttribute="leading" id="IZS-iA-DaU"/>
+                                                <constraint firstItem="fao-uN-vMJ" firstAttribute="leading" secondItem="7JR-z2-Qha" secondAttribute="leading" constant="73" id="CI8-g5-Lno"/>
+                                                <constraint firstItem="iBm-qb-h6i" firstAttribute="leading" secondItem="7JR-z2-Qha" secondAttribute="leading" constant="16" id="GgP-HJ-Dc1"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fao-uN-vMJ" secondAttribute="trailing" constant="16" id="U3s-lM-g5i"/>
                                                 <constraint firstAttribute="bottom" secondItem="9Na-pH-5bM" secondAttribute="bottom" id="UwG-wI-89c"/>
-                                                <constraint firstAttribute="bottom" secondItem="iBm-qb-h6i" secondAttribute="bottom" constant="8" id="Xau-oA-i5s"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gbx-dd-0X0" secondAttribute="bottom" id="Y42-57-LoY"/>
                                                 <constraint firstItem="9Na-pH-5bM" firstAttribute="top" secondItem="7JR-z2-Qha" secondAttribute="top" id="aj9-jy-LPW"/>
-                                                <constraint firstItem="fao-uN-vMJ" firstAttribute="leading" secondItem="iBm-qb-h6i" secondAttribute="trailing" constant="8" id="fBi-Xn-eQE"/>
+                                                <constraint firstItem="Gbx-dd-0X0" firstAttribute="leading" secondItem="7JR-z2-Qha" secondAttribute="leading" id="kNf-n3-rpp"/>
+                                                <constraint firstAttribute="bottom" secondItem="iBm-qb-h6i" secondAttribute="bottom" constant="8" id="mPW-iQ-pdk"/>
+                                                <constraint firstAttribute="trailing" secondItem="Gbx-dd-0X0" secondAttribute="trailing" id="ydT-Qa-z3e"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -135,6 +135,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tc1-tS-AfN"/>
                     </view>
+                    <connections>
+                        <outlet property="imageDetail" destination="6j4-fM-j52" id="a1i-YP-oZ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WV0-1B-jzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,21 +7,34 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
+import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    // TODO: CONSTANTS
+    let PIXABAY_URL = "https://pixabay.com/api/"
     let CellIdentifier = "myCustomCellView"
-    var name : String?
-
+   
+    
+    // TODO: Instance variables
+    //var imageDataModel = ImageDataModel()
+    var listImage : [ImageDataModel] = []
+    
+    // TODO: IBOutlet
     @IBOutlet weak var tableView: UITableView!
-    let data = ["jairo","alberto","cruz"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let params : [String : String] = ["key" : Util.API_KEY]
+        
         tableView.dataSource = self
         tableView.delegate = self
-        //tableView.estimatedRowHeight = 100
+        
+        getData(url: PIXABAY_URL, parameters: params)
         
         
     }
@@ -37,14 +50,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }*/
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! myTableViewCell
-        cell.userNameLabel?.text = data[indexPath.row]
-        cell.imageUserView?.image = UIImage(named: "ImageDummy")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCustomCellView", for: indexPath) as! myTableViewCell
+        let imageModel = self.listImage[indexPath.row]
+        cell.userNameLabel?.text = imageModel.user
+        let url = URL(string: imageModel.userImageUrl)
+        let urlImage = URL(string: imageModel.imageUrl)
+        cell.userProfileImageView?.af_setImage(withURL: url!)
+        cell.imageUserView?.af_setImage(withURL: urlImage!)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return self.listImage.count
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,12 +70,59 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
            // detailViewController.name = name!
             
         }*/
-       // guard let detail = segue.destination as? DetailUserViewController,
-           // let index = tableView.indexPathForSelectedRow?.row
-        //else {
-          //  return
-        //}
-        //detail.name = data[index]
+        
+        
+       guard let detail = segue.destination as? DetailUserViewController,
+            let index = tableView.indexPathForSelectedRow?.row
+        
+        else {
+            return
+        }
+        let imageModel = self.listImage[index]
+        detail.name = imageModel.user
+        detail.imageDetailV = imageModel.imageUrl
+    }
+    
+    // MARK: GET DATA USED ALMOFIRE REQUEST
+    func getData(url: String, parameters: [String: String]) {
+        
+        
+        Alamofire.request(url, method: .get, parameters: parameters).responseJSON {
+            response in
+            if response.result.isSuccess {
+                
+                print("Success got the data")
+                
+                let dataImageJSON : JSON = JSON(response.result.value!)
+                
+                self.updateImageData(json: dataImageJSON)
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            } else {
+                print("Error \(response.result.error ?? "Error desconocido" as! Error)")
+            }
+            
+        }
+        
+        
+    }
+    
+    // MARK: JSON Parsing
+    func updateImageData(json : JSON) {
+        
+        let hits = json["hits"]
+        print(hits)
+        
+        for(_,imageModel) in hits {
+            
+            self.listImage.append(ImageDataModel(user: imageModel["user"].stringValue, userImageUrl: imageModel["userImageURL"].stringValue, imageUrl: imageModel["webformatURL"].stringValue))
+            
+        }
+        
+        
     }
 
 

@@ -26,6 +26,9 @@ class myTableViewCell: UITableViewCell {
         userProfileImageView.layer.borderColor = UIColor.white.cgColor
         userProfileImageView.layer.borderWidth = 2
         // end custom
+        
+        
+        userNameLabel.layoutMargins = UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 0)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

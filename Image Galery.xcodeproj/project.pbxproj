@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		79469FDF9515B6A86229E835 /* Pods_Image_Galery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2216C90FF83DD17EE2AD07 /* Pods_Image_Galery.framework */; };
 		B82FA41B2243448400D96587 /* DetailUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FA41A2243448300D96587 /* DetailUserViewController.swift */; };
+		B882B2EF224C5E9F00F55132 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882B2EE224C5E9F00F55132 /* Util.swift */; };
+		B882B2F1224C844400F55132 /* ImageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882B2F0224C844400F55132 /* ImageDataModel.swift */; };
 		B895925E223C9CDB00E7F8E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895925D223C9CDB00E7F8E1 /* AppDelegate.swift */; };
 		B8959260223C9CDB00E7F8E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895925F223C9CDB00E7F8E1 /* ViewController.swift */; };
 		B8959263223C9CDB00E7F8E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8959261223C9CDB00E7F8E1 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		452578B5BB1140A85128D5D6 /* Pods-Image Galery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Image Galery.release.xcconfig"; path = "Target Support Files/Pods-Image Galery/Pods-Image Galery.release.xcconfig"; sourceTree = "<group>"; };
 		B82FA41A2243448300D96587 /* DetailUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewController.swift; sourceTree = "<group>"; };
+		B882B2EE224C5E9F00F55132 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		B882B2F0224C844400F55132 /* ImageDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataModel.swift; sourceTree = "<group>"; };
 		B895925A223C9CDB00E7F8E1 /* Image Galery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Galery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B895925D223C9CDB00E7F8E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B895925F223C9CDB00E7F8E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +54,6 @@
 				EB47CB27FE3565A2D2D9567B /* Pods-Image Galery.debug.xcconfig */,
 				452578B5BB1140A85128D5D6 /* Pods-Image Galery.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -99,6 +102,7 @@
 				B895925D223C9CDB00E7F8E1 /* AppDelegate.swift */,
 				B895925F223C9CDB00E7F8E1 /* ViewController.swift */,
 				B8E965442241E9B40064DC43 /* myTableViewCell.swift */,
+				B882B2EE224C5E9F00F55132 /* Util.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -115,6 +119,7 @@
 		B8959271223C9E5F00E7F8E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B882B2F0224C844400F55132 /* ImageDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Image Galery/Pods-Image Galery-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -229,6 +235,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8959260223C9CDB00E7F8E1 /* ViewController.swift in Sources */,
+				B882B2F1224C844400F55132 /* ImageDataModel.swift in Sources */,
 				B895925E223C9CDB00E7F8E1 /* AppDelegate.swift in Sources */,
+				B882B2EF224C5E9F00F55132 /* Util.swift in Sources */,
 				B82FA41B2243448400D96587 /* DetailUserViewController.swift in Sources */,
 				B8E965452241E9B40064DC43 /* myTableViewCell.swift in Sources */,
 			);
